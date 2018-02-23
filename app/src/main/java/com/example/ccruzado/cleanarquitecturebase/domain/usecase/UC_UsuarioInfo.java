@@ -1,6 +1,6 @@
 package com.example.ccruzado.cleanarquitecturebase.domain.usecase;
 
-import com.example.ccruzado.cleanarquitecturebase.data.Repository;
+import com.example.ccruzado.cleanarquitecturebase.data.repository.Repository;
 import com.example.ccruzado.cleanarquitecturebase.domain.model.Usuario;
 import com.example.ccruzado.cleanarquitecturebase.domain.usecase.base.UseCase;
 

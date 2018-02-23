@@ -7,6 +7,10 @@ import com.example.ccruzado.cleanarquitecturebase.presentation.base.BasePresente
 
 import java.util.List;
 
+import javax.inject.Inject;
+
+import io.reactivex.annotations.NonNull;
+
 /**
  * Created by ccruzado on 22/02/2018.
  */
@@ -15,7 +19,8 @@ public class UsuarioListPresenter extends BasePresenter<UsuarioListPresenter.Vie
 
     private UC_ListarUsuarios uc_listarUsuarios;
 
-    public UsuarioListPresenter(UC_ListarUsuarios uc_listarUsuarios) {
+    @Inject
+    public UsuarioListPresenter(@NonNull UC_ListarUsuarios uc_listarUsuarios) {
         this.uc_listarUsuarios = uc_listarUsuarios;
     }
 

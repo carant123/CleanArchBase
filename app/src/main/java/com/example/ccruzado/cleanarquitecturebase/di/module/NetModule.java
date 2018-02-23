@@ -1,6 +1,6 @@
 package com.example.ccruzado.cleanarquitecturebase.di.module;
 
-import com.example.ccruzado.cleanarquitecturebase.data.datasource.ApiService;
+import com.example.ccruzado.cleanarquitecturebase.data.api.ApiService;
 import com.example.ccruzado.cleanarquitecturebase.di.PerActivityScope;
 
 import java.util.concurrent.TimeUnit;
@@ -24,6 +24,9 @@ public class NetModule {
 //    CountryDataStoreFactory provideCountryDataStoreFactory() {
 //        return new CountryDataStoreFactory();
 //    }
+
+
+
 
     @PerActivityScope
     @Provides

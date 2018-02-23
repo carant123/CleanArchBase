@@ -1,8 +1,8 @@
-package com.example.ccruzado.cleanarquitecturebase.data;
+package com.example.ccruzado.cleanarquitecturebase.data.repository;
 
 import com.example.ccruzado.cleanarquitecturebase.StartApplication;
-import com.example.ccruzado.cleanarquitecturebase.data.datasource.ApiService;
-import com.example.ccruzado.cleanarquitecturebase.di.component.AppComponent;
+import com.example.ccruzado.cleanarquitecturebase.data.api.ApiService;
+import com.example.ccruzado.cleanarquitecturebase.data.model.UsuarioEntity;
 import com.example.ccruzado.cleanarquitecturebase.di.component.DaggerActivityComponent;
 import com.example.ccruzado.cleanarquitecturebase.domain.model.Usuario;
 
@@ -22,18 +22,18 @@ public class UsuarioApiData implements Repository {
     ApiService apiservice;
 
     public UsuarioApiData() {
-/*        DaggerActivityComponent.builder()
+        DaggerActivityComponent.builder()
                 .appComponent(StartApplication.getAppComponent())
-                .build().inject(this);*/
+                .build().inject(this);
     }
 
     @Override
-    public Observable<List<Usuario>> userList() {
-        return null;
+    public Observable<List<UsuarioEntity>> userList() {
+        return apiservice.ListaUsuario();
     }
 
     @Override
-    public Observable<Usuario> user(int id) {
-        return null;
+    public Observable<UsuarioEntity> user(int id) {
+        return apiservice.UsuarioInfo(id);
     }
 }

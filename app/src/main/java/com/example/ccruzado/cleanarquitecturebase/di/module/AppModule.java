@@ -3,6 +3,9 @@ package com.example.ccruzado.cleanarquitecturebase.di.module;
 import android.app.Application;
 import android.content.Context;
 
+import com.example.ccruzado.cleanarquitecturebase.data.repository.Repository;
+import com.example.ccruzado.cleanarquitecturebase.data.repository.UsuarioApiData;
+
 import javax.inject.Named;
 import javax.inject.Singleton;
 
@@ -25,6 +28,11 @@ public class AppModule {
         this.mApplication = mApplication;
     }
 
+    @Provides
+    @Singleton
+    Repository provideRepository(UsuarioApiData usuarioApiData) {
+        return usuarioApiData;
+    }
 
     @Provides
     @Singleton

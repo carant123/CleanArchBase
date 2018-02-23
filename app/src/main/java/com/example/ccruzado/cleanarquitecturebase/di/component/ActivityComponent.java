@@ -1,6 +1,7 @@
 package com.example.ccruzado.cleanarquitecturebase.di.component;
 
-import com.example.ccruzado.cleanarquitecturebase.data.datasource.ApiService;
+import com.example.ccruzado.cleanarquitecturebase.data.repository.UsuarioApiData;
+import com.example.ccruzado.cleanarquitecturebase.data.api.ApiService;
 import com.example.ccruzado.cleanarquitecturebase.di.PerActivityScope;
 import com.example.ccruzado.cleanarquitecturebase.di.module.NetModule;
 import com.example.ccruzado.cleanarquitecturebase.presentation.activity.UsuarioListActivity;
@@ -16,6 +17,8 @@ import dagger.Component;
 public interface ActivityComponent {
 
     void inject(UsuarioListActivity activity);
+    void inject(UsuarioApiData databaseapi);
+
 
 
     // todo lo que se expone a los modulos

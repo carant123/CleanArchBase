@@ -40,6 +40,11 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:${dagger_v}"
 
 
+    // Room (use 1.1.0-alpha2 for latest alpha)
+    implementation "android.arch.persistence.room:runtime:${room_v}"
+    annotationProcessor "android.arch.persistence.room:compiler:${room_v}"
+
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
@@ -47,6 +52,7 @@ dependencies {
 
 
 buildscript {
+    ext.room_v = '1.0.0'
     ext.retrofit_v = '2.3.0'
     ext.okthttp_v = '3.9.1'
     ext.picasso_v = '2.5.2'
